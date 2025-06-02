@@ -1,63 +1,30 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    background-color: #888; /* Fondo gris */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+let currentPage = 0;
+const pages = document.querySelectorAll('.page');
+
+function nextPage() {
+    if (currentPage < pages.length - 1) {
+        pages[currentPage].classList.remove('active');
+        pages[currentPage].style.transform = "rotateY(-180deg)"; // Efecto de pase de hoja
+        setTimeout(() => {
+            pages[currentPage].style.display = "none";
+            currentPage++;
+            pages[currentPage].style.display = "flex";
+            pages[currentPage].classList.add('active');
+            pages[currentPage].style.transform = "rotateY(0deg)";
+        }, 800);
+    }
 }
 
-.notebook {
-    width: 400px;
-    height: 400px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 50%;
-    background: white;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.page {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    transition: transform 0.8s ease-in-out;
-}
-
-.page:not(.active) {
-    display: none;
-}
-
-ul {
-    list-style-type: none;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 0;
-}
-
-li {
-    margin: 5px 0;
-}
-
-button {
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    background-color: #d2691e;
-    color: white;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #a0522d;
+function prevPage() {
+    if (currentPage > 0) {
+        pages[currentPage].classList.remove('active');
+        pages[currentPage].style.transform = "rotateY(180deg)"; // Efecto de pase de hoja
+        setTimeout(() => {
+            pages[currentPage].style.display = "none";
+            currentPage--;
+            pages[currentPage].style.display = "flex";
+            pages[currentPage].classList.add('active');
+            pages[currentPage].style.transform = "rotateY(0deg)";
+        }, 800);
+    }
 }
