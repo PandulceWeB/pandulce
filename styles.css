@@ -12,25 +12,24 @@ header {
     padding: 20px;
 }
 
-.pizza-menu {
-    width: 300px;
-    height: 300px;
+.menu-pizza {
+    width: 350px;
+    height: 350px;
     position: relative;
     border-radius: 50%;
-    margin: 30px auto;
+    margin: 40px auto;
     background: url('pizza.png') no-repeat center/cover;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
 .slice {
-    width: 140px;
-    height: 140px;
+    width: 170px;
+    height: 170px;
     position: absolute;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     color: white;
     cursor: pointer;
@@ -38,18 +37,22 @@ header {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    transition: 0.3s;
-    padding: 10px;
+    transition: transform 0.3s;
 }
 
 .slice:hover {
     transform: scale(1.1);
 }
 
-.slice1 { top: 5%; left: 25%; background-color: rgba(192, 57, 43, 0.8); }
-.slice2 { top: 25%; right: 5%; background-color: rgba(211, 84, 0, 0.8); }
-.slice3 { bottom: 25%; left: 5%; background-color: rgba(243, 156, 18, 0.8); }
-.slice4 { bottom: 5%; right: 25%; background-color: rgba(39, 174, 96, 0.8); }
+.slice1 { top: 10%; left: 10%; background-color: rgba(192, 57, 43, 0.9); }
+.slice2 { top: 10%; right: 10%; background-color: rgba(211, 84, 0, 0.9); }
+.slice3 { bottom: 10%; left: 10%; background-color: rgba(243, 156, 18, 0.9); }
+.slice4 { bottom: 10%; right: 10%; background-color: rgba(39, 174, 96, 0.9); }
+
+.slice span {
+    position: absolute;
+    transform: rotate(-15deg);
+}
 
 .section {
     display: none;
