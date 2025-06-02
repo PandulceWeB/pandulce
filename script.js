@@ -1,6 +1,16 @@
-function showSection(sectionId) {
-    const sections = document.querySelectorAll('.section');
-    sections.forEach(section => section.classList.remove('active'));
+let currentPage = 0;
+const pages = document.querySelectorAll('.page');
 
-    document.getElementById(sectionId).classList.add('active');
+function nextPage() {
+    if (currentPage < pages.length - 1) {
+        pages[currentPage].classList.add('hidden');
+        currentPage++;
+    }
+}
+
+function prevPage() {
+    if (currentPage > 0) {
+        currentPage--;
+        pages[currentPage].classList.remove('hidden');
+    }
 }
