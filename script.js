@@ -4,7 +4,7 @@ const pages = document.querySelectorAll('.page');
 function nextPage() {
     if (currentPage < pages.length - 1) {
         pages[currentPage].classList.remove('active');
-        pages[currentPage].style.transform = "rotateY(-180deg) scaleX(0)"; // Efecto de pase de hoja
+        pages[currentPage].style.transform = "rotateY(-180deg) scaleX(0)"; // Efecto de pase de hoja más natural
         setTimeout(() => {
             pages[currentPage].style.display = "none";
             currentPage++;
@@ -18,7 +18,7 @@ function nextPage() {
 function prevPage() {
     if (currentPage > 0) {
         pages[currentPage].classList.remove('active');
-        pages[currentPage].style.transform = "rotateY(180deg) scaleX(0)"; // Efecto de pase de hoja
+        pages[currentPage].style.transform = "rotateY(180deg) scaleX(0)"; // Efecto de pase de hoja más natural
         setTimeout(() => {
             pages[currentPage].style.display = "none";
             currentPage--;
