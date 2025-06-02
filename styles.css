@@ -15,8 +15,9 @@ body {
     height: 400px;
     position: relative;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 10px;
     background: url('notebook_texture.jpg') no-repeat center/cover;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .page {
@@ -24,29 +25,36 @@ body {
     height: 100%;
     position: absolute;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.8s ease-in-out;
 }
 
-.left, .right {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
+.page:not(.active) {
+    display: none;
+}
+
+.text {
+    font-size: 24px;
     font-weight: bold;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 2px solid #d2691e;
+    border: none;
+    background-color: #d2691e;
+    color: white;
+    border-radius: 5px;
     transition: 0.3s;
 }
 
-.left:hover, .right:hover {
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.hidden {
-    transform: translateX(-100%);
+button:hover {
+    background-color: #a0522d;
 }
