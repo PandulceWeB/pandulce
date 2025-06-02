@@ -12,38 +12,44 @@ header {
     padding: 20px;
 }
 
-.menu-container {
+.pizza-menu {
     width: 300px;
     height: 300px;
     position: relative;
     border-radius: 50%;
-    margin: 20px auto;
+    margin: 30px auto;
     background: url('pizza.png') no-repeat center/cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .slice {
-    width: 50%;
-    height: 50%;
+    width: 140px;
+    height: 140px;
     position: absolute;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color: white;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
     transition: 0.3s;
+    padding: 10px;
 }
 
 .slice:hover {
     transform: scale(1.1);
 }
 
-.slice1 { top: 0; left: 0; background-color: #c0392b; }
-.slice2 { top: 0; right: 0; background-color: #d35400; }
-.slice3 { bottom: 0; left: 0; background-color: #f39c12; }
-.slice4 { bottom: 0; right: 0; background-color: #27ae60; }
+.slice1 { top: 5%; left: 25%; background-color: rgba(192, 57, 43, 0.8); }
+.slice2 { top: 25%; right: 5%; background-color: rgba(211, 84, 0, 0.8); }
+.slice3 { bottom: 25%; left: 5%; background-color: rgba(243, 156, 18, 0.8); }
+.slice4 { bottom: 5%; right: 25%; background-color: rgba(39, 174, 96, 0.8); }
 
 .section {
     display: none;
