@@ -76,11 +76,15 @@ button {
 }
 
 .prev {
-    left: 10px;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .next {
-    right: 10px;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 button:hover {
