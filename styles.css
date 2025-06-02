@@ -64,7 +64,7 @@ li {
 }
 
 button {
-    padding: 6px 10px; /* Botones más pequeños */
+    padding: 8px 12px; /* Botones más pequeños */
     font-size: 14px;
     cursor: pointer;
     border: none;
@@ -76,13 +76,13 @@ button {
 }
 
 .prev {
-    left: -40px;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .next {
-    right: -40px;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
 }
