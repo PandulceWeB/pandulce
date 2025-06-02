@@ -4,67 +4,49 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffe5b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-header {
-    background-color: #d2691e;
-    color: white;
-    padding: 20px;
-}
-
-.menu-pizza {
-    width: 350px;
-    height: 350px;
+.notebook {
+    width: 300px;
+    height: 400px;
     position: relative;
+    overflow: hidden;
     border-radius: 50%;
-    margin: 40px auto;
-    background: url('pizza.png') no-repeat center/cover;
+    background: url('notebook_texture.jpg') no-repeat center/cover;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+.left, .right {
+    width: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.slice {
-    width: 170px;
-    height: 170px;
-    position: absolute;
-    text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    color: white;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transition: transform 0.3s;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #d2691e;
+    transition: 0.3s;
 }
 
-.slice:hover {
-    transform: scale(1.1);
+.left:hover, .right:hover {
+    background-color: rgba(255, 255, 255, 1);
 }
 
-.slice1 { top: 10%; left: 10%; background-color: rgba(192, 57, 43, 0.9); }
-.slice2 { top: 10%; right: 10%; background-color: rgba(211, 84, 0, 0.9); }
-.slice3 { bottom: 10%; left: 10%; background-color: rgba(243, 156, 18, 0.9); }
-.slice4 { bottom: 10%; right: 10%; background-color: rgba(39, 174, 96, 0.9); }
-
-.slice span {
-    position: absolute;
-    transform: rotate(-15deg);
-}
-
-.section {
-    display: none;
-    padding: 20px;
-}
-
-.active {
-    display: block;
-}
-
-footer {
-    background-color: #d2691e;
-    color: white;
-    padding: 10px;
+.hidden {
+    transform: translateX(-100%);
 }
