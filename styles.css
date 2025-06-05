@@ -77,13 +77,13 @@ button {
 
 .prev {
     left: 130px;
-    top: 80%;
+    top: 85%;
     transform: translateY(-50%);
 }
 
 .next {
     right: 130px;
-    top: 80%;
+    top: 85%;
     transform: translateY(-50%);
 }
 
