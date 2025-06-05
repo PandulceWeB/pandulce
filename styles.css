@@ -64,14 +64,14 @@ li {
 }
 
 button {
-    padding: 8px 12px; /* Botones más pequeños */
+    padding: 8px 12px; /* Tamaño del botón */
     font-size: 14px;
-    cursor: pointer;
+    cursor: pointer; /* Hace que el puntero cambie a una mano */
     border: none;
     background-color: #d2691e;
     color: white;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: background-color 0.3s, transform 0.1s; /* Agrega efecto de interacción */
     position: absolute;
 }
 
@@ -89,4 +89,9 @@ button {
 
 button:hover {
     background-color: #a0522d;
+    transform: scale(0.9);
+}
+
+button:active {
+    transform: scale(0.9); /* Simula el efecto de presionado */
 }
