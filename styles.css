@@ -34,6 +34,9 @@ body {
     transform-origin: left center;
     transition: transform 0.6s ease-in-out;
     perspective: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
 }
 
 .page-turning {
@@ -47,7 +50,9 @@ body {
 .columns {
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Asegura que el texto se alinee verticalmente */
     width: 80%;
+    height: 100%; /* Asegura que tome toda la altura disponible */
 }
 
 ul {
