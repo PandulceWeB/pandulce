@@ -60,6 +60,7 @@ ul {
     font-size: 14px; /* Fuente más pequeña */
     font-weight: bold;
     padding: 0;
+    top: 50px;
 }
 
 li {
